@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+
+}
+
+nav {
+  height: 10vh;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+}
+
+.navigation-pane{
+  position: fixed;
+  background: transparent;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center; 
+    list-style-type: none;
+    gap: 40px;
+    font-size: 15px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+}      
+
+a:hover {
+    text-decoration: underline;
+}
+
+.logo{
+    font-size: 15px;
+}
+
+.logo:hover{
+    cursor: default;
+}
+
+#hamburger-nav {
+    display: none;
+  }
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block; 
+    background:transparent;
+    justify-content: center; 
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3 ease-in-out;
+  }
+  
+.menu-links {
+  position: absolute;
+  top: 100%;
+  background-color: transparent;
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem;  
+  color: black;
+  text-decoration: none;
+  transition: all 0.3 ease-in-out;
+}
+
+.menu-links li {
+  list-style: none;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+.hamburger-icon span:first-child {
+  opacity: 1;
+}
+
+.hamburger-icon span:first-child {
+  transform: none;
+}
+
+section {
+  box-sizing: border-box;
+
+}
+
+
+#home {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 100vh;
+  background-image: url('images/shooting-star-background.jpg');
+  background-size: cover;
+  background-position: center;
+
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 6000;
+}
+
+.section__text__p1 {
+  text-align: center;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center; 
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.icon {
+  cursor: pointer;
+  height: 3rem;
+  margin: 10px;
+}
+
+#typing-text {
+  font-size: 24px;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.cv-button {
+  font-weight: 600;
+  transition: all 300ms ease;
+  padding: 1rem;
+  width: 8rem;
+  border-radius: 2rem;
+  background-color: rgb(53, 53, 53);
+  color: white;
+}
+
+.cv-button:hover{
+  cursor: pointer;
+}
+
+.aboutme-text{
+  font-size: 25px;
+}
+
+/**/ /**/ /**/ /**/ /**/ /**/
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aboutme-text{
+  text-align: center;
+}
+
+.about-content {
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  margin-top: 50px; /* Space above the content */
+  flex-wrap: wrap; 
+}
+
+.about-image {
+  margin-right: 40px; /* Space between image and text */
+}
+
+.about-image img {
+  width: 350px; /* Set width for the image to 150px */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%;
+  margin-left: 20px; /* Optional: rounded corners for the image */
+}
+
+.about-text {
+  flex: 1; /* Allow text to take available space */
+}
+
+.about-containers {
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.about-containers,
+.about-details-container {
+  display: flex;
+}
+
+.details-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  text-align: center;
+  
+}
+
+.preview-button {
+  align-self: flex-end;
+}
+
+
+
+/**/ /**/ /**/ /**/ /**/ /**/
+
+#about {
+  padding: 50px;
+}
+
+
+/**/ /**/ /**/ /**/ /**/ /**//**/ /**/ /**/ /**/ /**/ /**/
+
+.projects-section {
+  padding: 20px; /* Add padding */
+  color: white; /* Set text color to white */
+  background-color: #141a29;
+}
+
+.projects-head{
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.projects-description {
+  text-align: center; /* Center description text */
+  margin-bottom: 20px; /* Space below the description */
+}
+
+.projects-list {
+  margin-top: -40px;
+  display: flex; /* Use flexbox for the list */
+  justify-content: center; /* Center items horizontally */
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+}
+
+.project-item {
+  margin: 50px; /* Space around each project item */
+  width: 400px; /* Fixed width for project items */
+  text-align: center; /* Center text in project items */
+}
+
+.project-item img {
+  width: 330px; /* Make images responsive */
+  height: 280px; /* Maintain aspect ratio */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+
+/**/ /**/ /**/ /**/ /**/ /**//**/ /**/ /**/ /**/ /**/ /**/
+
+.contacts-head{
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+
+.contact-section {
+  padding: 20px; /* Add padding */
+  color: white; /* Set text color to white */
+  background-color: #141a29; /* Dark background for contrast */
+}
+
+.contact-head {
+  font-size: 24px; /* Larger title font */
+  text-align: center; /* Center the title */
+  margin-bottom: 20px; /* Space below the title */
+}
+
+.contact-item {
+  margin: 50px; /* Space around each project item */
+  width: 400px; /* Fixed width for project items */
+  text-align: center; /* Center text in project items */
+}
+
+.contact-list-item {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically center items */
+  margin: 20px 0; /* Space between list items */
+}
+
+.contact-list-item img {
+  width: 50px; /* Set a fixed width for images */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Space between image and text */
+}
+
+.contact-form {
+  display: flex; /* Use flexbox for the form */
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center elements horizontally */
+}
+
+.form-group {
+  margin-bottom: 15px; /* Space between form fields */
+  width: 100%; /* Full width */
+  max-width: 400px; /* Maximum width for the form */
+}
+
+label {
+  margin-bottom: 5px; /* Space below labels */
+}
+
+input, textarea {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside input fields */
+  border: 1px solid #ccc; /* Border for input fields */
+  border-radius: 5px; /* Rounded corners */
+}
+
+textarea {
+  resize: vertical; /* Allow vertical resizing */
+  height: 100px; /* Default height */
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="mediaqueries.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <title>Portfolio</title>
+    </head>
+
+    <body>
+        <nav id="desktop-nav" class="navigation-pane">
+            <div>
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <nav id="hamburger-nav">
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a href="#home" onclick="toggleMenu()">Home</a></li>   
+            <li><a href="#about" onclick="toggleMenu()">About</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          </div>
+        </div>
+      </nav>
+      
+      <section id="home">
+        
+        <div class="section__text">
+          <p class="section__text__p1">Hello, I'm</p>
+          <h1 class="title">Nathaniel Babilonia</h1>
+
+          <p id="typing-text"> </p>
+          <div>
+            <button class="cv-button" onclick="openPDF()">
+              Download CV
+          </div>
+          <div id="socials-container">
+            <img
+              src="images/linkedin-icon.svg"
+              alt="My LinkedIn profile"
+              class="icon"
+              onclick="window.open('https://www.linkedin.com/in/nathaniel-babilonia-204857321/')"
+            />
+            <img
+              src="images/github-color.svg"
+              alt="My Github profile"
+              class="icon"
+              onclick="window.open('https://github.com/lnathbabilonia')"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="fadess">
+        <h1 class="title">About Me</h1>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="images/profile.jpg" alt="Display Picture" />
+            </div>
+            <div class="about-text">
+                <p class="aboutme-text">
+                  Hello! I’m <strong>Nathaniel Babilonia</strong>, and I’m really passionate about software development. 
+                  I graduated from <strong>TRIMEX Colleges</strong> with a bachelor degree in Computer Engineering.
+                  Now I'm looking for a role that I can apply my skills and knowledge and challenges me to grow further and expand my expertise.
+                </p>
+
+                <div class="about-containers">
+                  <div class="details-container">
+                    <img
+                      src="images/degree-icon.svg"
+                      alt="Education icon"
+                      class="icon"
+                    />
+                    <h3>Education</h3>
+                    <p>
+                      BS Computer Engineering<br/>
+                      <strong>TRIMEX Colleges</strong>
+                    </p>
+                  </div>
+                  <div class="details-container">
+                    <img
+                      src="images/award-icon.svg"
+                      alt="Award icon"
+                      class="icon"
+                    />
+                    <h3>Award</h3>
+                    <p>
+                      Best in Thesis<br/>
+                      <strong>TRIMEX Colleges</strong>
+                    </p>
+                    <button class="preview-button">Preview</button>
+                  </div>
+                  <div class="details-container">
+                    <img
+                      src="images/diploma-icon.svg"
+                      alt="Certification icon"
+                      class="icon"
+                    />
+                    <h3>Certification</h3>
+                    <p>
+                      Computer System Servicing NCII<br />
+                      <strong>TESDA</strong>
+                    </p>
+                    <button class="preview-button">Preview</button>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects-section">
+        <p class="projects-head">Projects</p>
+        <div class="projects-description">
+            <p>Here are some of the projects I have worked on. Click on the images to learn more!</p>
+        </div>
+        <div class="projects-list">
+            <div class="project-item">
+                <img src="images/project1.jpg" alt="Project 1" />
+                <h3>Sales Management System</h3>
+                <p>This application was designed to streamline the ordering and sales management process of the local shop.</p>
+                <button>Click Here to Learn More</button>
+            </div>
+            <div class="project-item">
+                <img src="images/project2.jpg" alt="Project 2" />
+                <h3>Leaf and Pest Detection System</h3>
+                <p>This application was designed using Raspberry Pi that detects types of leaf disease and pest using convolutional neural network.</p>
+                <button>Click Here to Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <p class="contacts-head">Contact Me</p>
+      <div class="projects-list">
+          <div class="contact-item">
+              <ul>
+                  <li class="contact-list-item">
+                      <img src="images/viber-icon.svg" alt="Viber Icon" />
+                      <span>+639777851834</span>
+                  </li>
+                  <li class="contact-list-item">
+                      <img src="images/email-icon.svg" alt="Gmail Icon" />
+                      <span>nathbabilonia@gmail.com</span>
+                  </li>
+                  <li class="contact-list-item">
+                      <img src="images/skype-iconm.svg" alt="Skype Icon" />
+                      <span>live:.cid.8a96358035faa9f1</span>
+                  </li>
+              </ul>
+          </div>
+          <div class="contact-item">
+              <form action="https://formspree.io/f/xgvewbnb" method="POST">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required>
+      
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+      
+                  <label for="message">Message:</label>
+                  <textarea id="message" name="message" required></textarea>
+      
+                  <button type="submit">Send</button>
+              </form>
+              <p id="response-message"></p>
+          </div> 
+
+    <script src="script.js"></script>
+    </body>
+</html>
+
